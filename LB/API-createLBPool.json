@@ -1,0 +1,32 @@
+{
+    "resource_type": "Infra",
+    "children": [
+    {
+      "resource_type": "ChildLBPool",
+      "marked_for_delete": false,
+      "LBPool": {
+        "resource_type": "LBPool",
+        "id": "{{pool_name}}",
+        "marked_for_delete": false,
+        "active_monitor_paths": [
+          "/infra/lb-monitor-profiles/{{pool_monitor_name}}"
+        ],
+        "algorithm": "{{algoritmo}}",
+        "members": [
+          {
+            "admin_state": "ENABLED",
+            "backup_member": false,
+            "display_name": "{{member_1_name}}",
+            "ip_address": "{{member_1_ip}}",
+            "max_concurrent_connections": 1,
+            "port": "{{member_1_port}}",
+            "weight": 1
+          }
+        ],
+        "snat_translation": {
+          "type": "LBSnatDisabled"
+        }
+      }
+    }
+    ]
+  }

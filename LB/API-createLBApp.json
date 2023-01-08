@@ -1,0 +1,13 @@
+{
+    "resource_type": "Infra",
+    "children": [
+      {
+        "resource_type": "ChildLBAppProfile",
+        "marked_for_delete": false,
+        "LBAppProfile": {
+          "resource_type": "LBFastTcpProfile",
+          "id": "{{vip_app_profile}}"
+        }
+      }
+    ]
+  }

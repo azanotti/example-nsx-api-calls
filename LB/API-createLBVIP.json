@@ -1,0 +1,20 @@
+{
+    "resource_type": "Infra",
+    "children": [
+      {
+        "resource_type": "ChildLBVirtualServer",
+        "marked_for_delete": false,
+        "LBVirtualServer": {
+          "resource_type": "LBVirtualServer",
+          "id": "{{virtual_server_name}}",
+          "lb_service_path": "/infra/lb-services/{{load_balancer_name}}",
+          "ip_address": "{{vip_ip}}",
+          "ports": [
+            "{{vip_port}}"
+          ],
+          "pool_path": "/infra/lb-pools/{{pool_name}}",
+          "application_profile_path": "/infra/lb-app-profiles/{{vip_app_profile}}"
+        }
+      }
+    ]
+  }

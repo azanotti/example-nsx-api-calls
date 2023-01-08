@@ -1,0 +1,24 @@
+{
+    "resource_type": "Infra",
+    "children": [
+      {
+        "resource_type": "ChildLBMonitorProfile",
+        "marked_for_delete": false,
+        "LBMonitorProfile": {
+          "resource_type": "LBHttpMonitorProfile",
+          "marked_for_delete": false,
+          "id": "{{pool_monitor_name}}",
+          "monitor_port": "{{monitor_port}}",
+          "timeout": 5,
+          "interval": 15,
+          "fall_count": 3,
+          "request_method": "GET",
+          "request_url": "/",
+          "response_status_codes": [
+            "{{response_code_01}}",
+            "{{response_code_02}}"
+          ]
+        }
+      }
+    ]
+  }

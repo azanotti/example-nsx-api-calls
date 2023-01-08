@@ -1,0 +1,16 @@
+{
+    "resource_type": "Infra",
+    "children": [
+      {
+        "resource_type": "ChildLBService",
+        "marked_for_delete": false,
+        "LBService": {
+          "resource_type": "LBService",
+          "id": "{{load_balancer_name}}",
+          "connectivity_path": "/infra/tier-1s/{{t1_name}}",
+          "error_log_level": "INFO",
+          "access_log_enabled": true
+        }
+      }
+    ]
+  }

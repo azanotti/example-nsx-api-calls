@@ -1,0 +1,22 @@
+{
+    "resource_type": "Infra",
+    "children": [
+      {
+        "resource_type": "ChildTier1",
+        "marked_for_delete": false,
+        "Tier1": {
+          "resource_type": "Tier1",
+          "id": "NSXT25-T1",
+          "description": "NSXT25-T1",
+          "display_name": "NSXT25-T1",
+          "failover_mode": "NON_PREEMPTIVE",
+          "tier0_path": "/infra/tier-0s/NSXT25-T0",
+          "route_advertisement_types": [
+            "TIER1_LB_VIP",
+            "TIER1_CONNECTED",
+            "TIER1_STATIC_ROUTES"
+          ]
+        }
+      }
+    ]
+  }

@@ -1,0 +1,15 @@
+{
+  "resource_type": "Infra",
+  "children": [{
+      "resource_type": "ChildSegment",
+      "marked_for_delete": "false", 
+      "Segment": {
+        "resource_type": "Segment",
+        "type": "DISCONNECTED",
+        "transport_zone_path": "/infra/sites/default/enforcement-points/default/transport-zones/{{TZ_ID}}",
+        "id": "{{segment_name}}",
+        "display_name": "{{segment_name}}"
+      }
+    }
+  ]
+}
